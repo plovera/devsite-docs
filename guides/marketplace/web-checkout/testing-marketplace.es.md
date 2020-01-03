@@ -19,7 +19,7 @@ Para simular el proceso de pago de punta a punta debes crear 3 usuarios de prueb
 >
 > Nota
 >
-> Para poder testear el Smart Checkout todos los involucrados en el flujo deben ser test_users, caso contrario devolverá el error de "Invalid users involved". 
+> Para poder testear el Checkout Mercado Pago todos los involucrados en el flujo deben ser test_users, caso contrario devolverá el error de "Invalid users involved". 
 
 
 Debes efectuar la siguiente llamada a la API para crear cada uno de los usuarios.
@@ -37,7 +37,7 @@ AT=`curl -s -X POST -H 'content-type: application/x-www-form-urlencoded' 'https:
 curl -X POST \
 -H "Content-Type: application/json" \
 "https://api.mercadopago.com/users/test_user?access_token=$AT" \
--d '{"site_id":"[FAKER][GLOBALIZE][SITE_ID]"}'
+-d '{"site_id":"[FAKER][GLOBALIZE][UPPER_SITE_ID]"}'
 ```
 ##### _Response_
 ```curl

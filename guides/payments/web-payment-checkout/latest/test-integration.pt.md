@@ -14,7 +14,7 @@ sites_supported:
 
 ## Como testar minha integração
 
-**Os usuários de teste permitem que você faça testes no seu Smart Checkout** ao gerar fluxos de pagamento em uma cópia fiel da sua integração.
+**Os usuários de teste permitem que você faça testes no seu Checkout Mercado Pago** ao gerar fluxos de pagamento em uma cópia fiel da sua integração.
 
 Tipos de usuarios | Descrição
 ------------ | -------------
@@ -34,7 +34,7 @@ Execute o seguinte curl para gerar um usuário de teste:
 curl -X POST \
 -H "Content-Type: application/json" \
 "https://api.mercadopago.com/users/test_user?access_token=PROD_ACCESS_TOKEN" \
--d '{"site_id":"[FAKER][GLOBALIZE][SITE_ID]"}'
+-d '{"site_id":"[FAKER][GLOBALIZE][UPPER_SITE_ID]"}'
 ```
 
 
@@ -65,7 +65,7 @@ curl -X POST \
 
 ### 1. Configure o checkout com os dados do seu usuário vendedor
 
-Gere uma preferência com as <a href="([FAKER][CREDENTIALS][URL])" target="_blank"> credenciais</a> do usuário de teste que quiser usar como vendedor.
+Gere uma preferência com as <a href="[FAKER][CREDENTIALS][URL]" target="_blank"> credenciais</a> do usuário de teste que quiser usar como vendedor.
 
 ### 2. Faça um pagamento de teste com seu usuário comprador
 
@@ -112,7 +112,7 @@ Para **testar diferentes resultados de pagamento**, preencha o dado que quiser n
 
 ## Começar a receber pagamentos
 
-Para começar a cobrar, você deve preencher o formulário <a href="([FAKER][CREDENTIALS][URL])" target="_blank"> Quero ir para produção</a>.
+Para começar a cobrar, você deve preencher o formulário <a href="[FAKER][CREDENTIALS][URL]" target="_blank"> Quero ir para produção</a>.
 
 Ao terminar o formulário, certifique-se de que as credenciais na sua integração sejam as da conta que recebe o dinheiro das vendas.<br/>
 

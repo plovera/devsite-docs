@@ -324,7 +324,7 @@ Si se quiere habilitar el pago de una preferencia con un tiempo de duración det
 
 ### Sponsor ID
 
-El atributo `sponsor_id` es un identificador del desarrollador o compañía de software que realiza la integración del  Smart Checkout, este dato es visible en la preferencia y en el pago.
+El atributo `sponsor_id` es un identificador del desarrollador o compañía de software que realiza la integración del  Checkout Mercado Pago, este dato es visible en la preferencia y en el pago.
 
 ```json
 "sponsor_id": 123456789
@@ -480,6 +480,9 @@ Para activar la opción de pago, ve a tus <a href="https://www.mercadopago.com.a
 ![Config pago 2 tarjetas](/images/web-payment-checkout/config_pago_dos_tarjetas.gif)
 
 ------------
+
+
+---
 
 ### Próximos pasos
 

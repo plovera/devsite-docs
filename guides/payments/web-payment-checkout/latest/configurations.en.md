@@ -196,7 +196,7 @@ If you want to enable the payment of a preference with a certain duration, you c
 
 ### Sponsor ID
 
-The `sponsor_id` attribute is an identifier of the developer or software company that performs the Smart Checkout integration, this data is visible in the preference and in the payment.
+The `sponsor_id` attribute is an identifier of the developer or software company that performs the Checkout Mercado Pago integration, this data is visible in the preference and in the payment.
 
 ```json
 "sponsor_id": 123456789
@@ -351,6 +351,7 @@ To activate the payment option, go to your <a href="https://www.mercadopago.com.
 ![Config pago 2 tarjetas](/images/web-payment-checkout/config_pago_dos_tarjetas.gif)
 
 ------------
+
 
 ---
 

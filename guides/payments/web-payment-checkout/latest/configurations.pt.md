@@ -309,7 +309,7 @@ Se quiser ativar o pagamento de uma preferência com uma determinada duração, 
 
 ### Sponsor ID
 
-O atributo `sponsor_id` é um identificador do desenvolvedor ou empresa de software que faz a integração do  Smart Checkout, este dado é visível na preferência e no pagamento.
+O atributo `sponsor_id` é um identificador do desenvolvedor ou empresa de software que faz a integração do  Checkout Mercado Pago, este dado é visível na preferência e no pagamento.
 
 
 ```json
@@ -456,7 +456,7 @@ curl -X POST \
 
 ----[mla, mlb]----
 
-## Pagamentos com 2 cartão de crédito
+## Pagamentos com 2 cartões de crédito
 
 ![Pago 2 tarjetas](/images/web-payment-checkout/pay_2_tarjetas_br.png)
 
@@ -466,6 +466,7 @@ Você pode ativar a opção de oferecer pagamento com dois cartões de crédito 
 ![Config pago 2 tarjetas](/images/web-payment-checkout/config_pago_dos_tarjetas_br.gif)
 
 ------------
+
 
 ---
 

@@ -7,6 +7,7 @@ sites_supported:
     - mlc
     - mpe
     - mlv
+    - mlu
     - global
 ---
 # Recibir pagos
@@ -441,6 +442,12 @@ Para obtener una respuesta de pago se deberá implementar el protocolo **PXLifeC
 Las notificaciones son la forma automática de enterarte de tus nuevos pagos y las actualizaciones de sus estados. Esto te permitirá administrar tu _stock_ y mantener tu sistema sincronizado.
 
 Visita la sección [Notificaciones](https://www.mercadopago.com.ar/developers/es/guides/notifications/ipn) para conocer más sobre esto.
+
+### Previene pagos rechazados
+
+Un pago puede ser rechazado porque el emisor del medio de pago detecta un problema o porque no se cumple con los requisitos de seguridad necesarios.
+
+Evita pagos rechazados con nuestras recomendaciones y <a href="https://www.mercadopago.com.ar/developers/es/guides/manage-account/payment-rejections" target="_blank">mejora la aprobación de tus pagos</a>.
 
 ### Prueba la integración
 

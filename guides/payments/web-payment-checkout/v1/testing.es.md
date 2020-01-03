@@ -16,7 +16,7 @@ sites_supported:
 >
 > Esta documentación es sobre la versión antigua de Checkout.
 >
-> Ten en cuenta que solo hay soporte activo y nuevas funcionalidades en la [nueva versión del Smart Checkout](https://www.mercadopago.com.ar/developers/es/guides/payments/web-payment-checkout/introduction/).
+> Ten en cuenta que solo hay soporte activo y nuevas funcionalidades en la [nueva versión del Checkout Mercado Pago](https://www.mercadopago.com.ar/developers/es/guides/payments/web-payment-checkout/introduction/).
 
 Es muy importante que antes de salir a producción realices pruebas del flujo de pagos, verificando que las configuraciones que realizaste a nivel de preferencia se reflejen efectivamente en el _checkout_.
 Debes verificar que:
@@ -69,7 +69,7 @@ Utiliza el dato *site_id* para indicar el país donde quieres realizar las prueb
 curl -X POST \
 -H "Content-Type: application/json" \
 "https://api.mercadopago.com/users/test_user?access_token=ENV_ACCESS_TOKEN" \
--d '{"site_id":"[FAKER][GLOBALIZE][SITE_ID]"}'
+-d '{"site_id":"[FAKER][GLOBALIZE][UPPER_SITE_ID]"}'
 ```
 ]]]
 ##### _Response_
