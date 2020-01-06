@@ -1,86 +1,144 @@
-# Mercado Pago's release notes 2018
+# Release notes Mercado Pago 2019
+
+Cada release note describe los cambios que aplican a una versión. Estos cambios pueden incluir:
+
+- **Actualizaciones en APIs:** lanzamiento, modificación o eliminación de recursos, parámetros o campos en nuestras APIs.
+
+- **Nuevos productos o funcionalidades:** Lanzamiento de herramientas que harán que puedas aceptar pagos de forma más fácil.
+
+- **Anuncios:** Novedades relacionadas a alguno de nuestros productos o cambios a futuro.
+
+- **Actualizaciones en la documentación:** Guías, referencias y tutoriales para ayudarte a monetizar tu negocio integrando Mercado Pago.
+
+## 5 de Diciembre de 2019
+
+En Mercado Pago buscamos siempre optimizar nuestra plataforma ofreciendo la más alta eficiencia y seguridad en el procesamiento de pagos.
+
+En esta ocasión, estamos trabajando en el apagado de nuestra API de Checkout Custom versión 0 con el objetivo de mantener los más altos estándares de calidad.
+
+Después del 12 de diciembre del 2019, la versión 0 dejara de tener soporte.
+
+El apagado afecta a los siguientes recursos:
+
+| Uso                        | Método | URI del Recurso deprecado                |
+|----------------------------|--------|------------------------------------------|
+| Pago                       | `POST` | /checkout/custom/create_payment          |
+| Medio de Pagos             | `GET`  | /checkout/custom/payment_methods         |
+| Búsqueda de Medios de Pagos| `GET`  | /checkout/custom/payment_methods/search  |
+| Emisores                   | `GET`  | /checkout/custom/card_issuers            |
+
+En [este artículo](https://www.mercadopago.com.ar/developers/es/guides/payments/api/introduction) vas a encontrar los recursos equivalentes.
+
+## 25 de Noviembre de 2019
+
+Para cumplir con los más altos estándares de seguridad, buscamos siempre estar actualizados. Por eso, la versión antigua de **notificaciones IPN (Instant Payment Notification)** ya no estará disponible a partir del 9 de diciembre.
+
+Si la estás usando, **tienes que revisar tu versión y actualizarla para evitar problemas y pérdidas de servicio.** En caso de no querer hacerlo, puedes usar otro tipo de notificaciones que ofrecemos.
+
+Puedes encontrar toda la información necesaria en la [guía de la migración](https://www.mercadopago.com.ar/developers/es/guides/changelog/migration-guides/ipn-ow-guide).
+
+----[mlc, mco]----
+
+## 25 de Septiembre de 2019
+
+**Mejoras al flujo PSE, Webpay y Khipu.**
+
+- Si se informa la url deseada en el campo “callback_url”, el usuario será redireccionado a dicha url luego de 15 segundos de realizado el pago.
+- En caso de no informarse una “callback_url”, se muestra nuestra pantalla de confirmación, sin disparar la redirección.
+
+------------
+----[mlc]----
+
+**Mejoras para pagos rechazados en Shopify**
+
+- Se solucionó el problema cuando un cliente de Shopify selecciona débito como medio de pago vía Webpay, y navega hacia atrás en el browser, ya no se muestra la pantalla de confirmación, sino que se rechaza el pago.
+
+------------
+
+----[mla, mco]----
+
+## 26 de Junio de 2019
+
+Mejoras en documentación de Modelo Gateway
+
+------------
+----[mlb, mlm, mlc, mco, mpe]----
+
+## 29 de mayo de 2019
+
+**Módulos oficiales con soporte de Mercado Pago**
+
+Queremos darte la mejor experiencia, siempre. Por eso, te contamos cuáles son los módulos que cuentan con soporte oficial de Mercado Pago y que puedas tener un servicio personalizado cuando lo necesites:
+
+------------
+----[mla, mlu]----
+
+## 29 de mayo de 2019
+
+**Módulos oficiales con soporte de Mercado Pago**
+
+Queremos darte la mejor experiencia, siempre. Por eso, te contamos cuáles son los módulos que cuentan con soporte oficial de Mercado Pago y que puedas tener un servicio personalizado cuando lo necesites:
+
+------------
 
 
-Each release note describes the new changes applying to a version. This changes may include:
+| Módulo                  | Versiones                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------|
+| WooCommerce             | WordPress 3.1.x - 4.9.x, WooCommerce 2.6.x - 3.4.x                                          | 
+| PrestaShop              | Prestashop 1.6.x - 1.7.x                                                                    |
+| Magento                 | Community Edition 1.8.x - 1.9.x, Enterprise Edition 1.11.x - 1.14.x, Magento 2.0.0 - 2.3.x  | 
+| Shopify                 | -                                                                                           |
 
-- **API updates:** added, modified or deleted resources,parameters or fields in our APIs.
-
-- **New products or features:** Launch of tools which will help you accept payments seamlessly.
-
-- **Annoucements:** News related to any of our products or future changes.
-
-- **Documentation updates:** Guides, references and tutorials to help you monetize your business by integrating Mercado Pago.
-
-## December 10 2018
-
-At Mercado Pago we always try to optimize our platform offering the highest efficiency and security in payment processing.
-
-We are currently working on migrating our API version 0 to version 1 in order to maintain the highest quality standards.
-
-After this deadline, version 0 will stop having support.
-
-The migration will involve the following resources:
-
-| Use                     | Method | Deprecated resource URI                      | Equivalent resource URI              |
-|-------------------------|--------|----------------------------------------|----------------------------------|
-| Refunds            | `POST` | /collections/$payment_id/refunds       | /v1/payments/$payment_id/refunds |
-| Refunds            | `PUT`  | /collections/$payment_id               | /v1/payments/$payment_id/        |
-| Payment updates  | `PUT`  | /payments/$payment_id                  | /v1/payments/$payment_id/        |
-| Payment updates  | `PUT`  | /collections/$payment_id               | /v1/payments/$payment_id/        |
-| Payments                   | `GET`  | /payments/$payment_id                  | /v1/payments/$payment_id/        |
-| Payments                   | `GET`  | /collections/$payment_id               | /v1/payments/$payment_id/        |
-| Payments notifications | `GET`  | /collections/notifications/$payment_id | /v1/payments/$payment_id/        |
-| Payments search       | `GET`  | /payments/search                       | /v1/payments/search              |
-| Payments search       | `GET`  | /collections/search                    | /v1/payments/search              |
-
-More information [in this article](https://www.mercadopago.com.ar/developers/en/guides/localization/migrating-v0-v1).
-
-## September 13 2018
-
-**Mercado Envíos feature disabled for Mercado Pago integrations in Brazil**
-
-Due to performance problems, Mercado Envíos feature for Mercado Pago integrations in Brazil was disabled.
-
-Mercado Envíos within the Mercado Libre platform will continue to function normally.
-
-Please bear in mind that this change may affect some integrations made previously, in this case we request you contact our support team indicating the accounts with which you operated so that your case can be analyzed in particular.
-
-## June 30 2018
-
-- We are working on the **end of support of TLS 1.0** for the domains [https://api.mercadopago.com](https://api.mercadopago.com) and [https://pagamento.mercadopago.com](https://pagamento.mercadopago.com) with the objective of maintaining the highest quality standards and promoting the security of our clients' data.
-
-- As of June 30, 2018 we will require that the connections to these domains be through the encryption protocol TLS 1.1 or higher. More information in [this article](https://www.mercadopago.com.ar/developers/en/guides/pci-compliant-merchants/disabling-tls-10)
+[Ver módulos](https://www.mercadopago.com.ar/developers/es/plugins_sdks).
 
 
-## June 14 2018
+----[mlb, mlm, mlc, mco, mpe]----
 
-Due to a Information Disclosure issue, we'll be hidding some of the payer's contact information for **non approved payments**.
+> Ten en cuenta que los módulos y plataformas no mencionadas solamente tienen soporte de la comunidad.
 
-This means that any `GET` or `POST` request over **/v1/payments**  will be giving a response like the following:
+------------
 
-```json
-...
-    "payer": {
-        "type": null,
-        "id": 12345,
-        "email": null,
-        "identification": {
-            "type": null,
-            "number": null
-        },
-        "phone": {
-            "area_code": null,
-            "number": null,
-            "extension": null
-        },
-        "first_name": null,
-        "last_name": null,
-        "entity_type": null
-    },
-```
+----[mla, mlu]----
+
+> Tené en cuenta que los módulos y plataformas no mencionadas solamente tienen soporte de la comunidad.
+
+------------
+
+----[mlb, mlm, mlc, mco, mpe]----
+
+## 16 de abril de 2019
+
+**Navegadores compatibles con Mercado Pago**
+
+Actualizamos nuestros protocolos de seguridad para cumplir con los más altos estándares de seguridad.
+
+Para seguir usando Mercado Pago sin problemas, es necesario que lo hagas desde las versiones soportadas por nuestros dominios:
+
+------------
 
 
+----[mla, mlu]----
 
-- **What about Sandbox?**: We'll be giving you mock and static values.
-- This changes will have effect over payments **off**  Mercado Libre's platform.
-- This changes will have effect from June 16th.
+## 16 de abril de 2019
+
+**Navegadores compatibles con Mercado Pago**
+
+Actualizamos nuestros protocolos de seguridad para cumplir con los más altos estándares de seguridad.
+
+Para seguir usando Mercado Pago sin problemas, es necesario que lo hagas desde las versiones soportadas por nuestros dominios:
+
+------------
+
+| Navegador               | Versión            |
+|-------------------------|--------------------|
+| Internet Explorer       | 9 o posterior      | 
+| Chrome                  | 6 o posterior      |
+| Android Browser         | 2.3.3 o posterior  | 
+
+----[mlb, mlm, mlc, mco, mpe]----
+> Ten en cuenta que no vas a poder ingresar a ningún sitio de Mercado Pago con los navegadores no compatibles.
+------------
+
+----[mla, mlu]----
+> Tené en cuenta que no vas a poder ingresar a ningún sitio de Mercado Pago con los navegadores no compatibles.
+------------
